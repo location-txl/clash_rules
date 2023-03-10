@@ -92,6 +92,7 @@ mix-rule-providers:
     interval: 86400        
 
 prepend-rules:
+  - DOMAIN,download.jetbrains.com,DIRECT
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
