@@ -49,6 +49,7 @@ async function parsePortYaml(axios, yaml, console, test, obj) {
     }else{
         console.log("get config data error code:" + status)
     }
+    addBingGroup(console, obj);
     addChatgptGroup(console, obj);
     console.log("end process")
 }
@@ -97,6 +98,25 @@ function addChatgptGroup(console, obj) {
     obj[PROXY_GROUP_KEY].push(newProxyGroup);
 
     obj[PROXY_RULE_KEY].unshift("DOMAIN-KEYWORD,openai,ChatGpt");
+    console.log("添加代理组:" + newProxyGroup.name)
+}
+
+function addBingGroup(console, obj) {
+    const newProxyGroup = {
+        name: "Bing",
+        type: "select",
+        proxies: [],
+    };
+    newProxyGroup.proxies.push("自动选择");
+
+    obj[PROXIES_KEY].forEach(proxy => {
+        if (proxy.name.includes("-") && !proxy.name.includes("香港") && !proxy.name.includes("台湾") && !proxy.name.includes("澳门")) {
+            newProxyGroup.proxies.push(proxy.name);
+        }
+    });
+    obj[PROXY_GROUP_KEY].push(newProxyGroup);
+
+    obj[PROXY_RULE_KEY].unshift("DOMAIN-KEYWORD,bing.com,Bing");
     console.log("添加代理组:" + newProxyGroup.name)
 }
 
