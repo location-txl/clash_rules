@@ -110,13 +110,13 @@ function addBingGroup(console, obj) {
     newProxyGroup.proxies.push("自动选择");
 
     obj[PROXIES_KEY].forEach(proxy => {
-        if (proxy.name.includes("-") && !proxy.name.includes("香港") && !proxy.name.includes("台湾") && !proxy.name.includes("澳门")) {
+        if (!proxy.name.includes("香港") && !proxy.name.includes("台湾") && !proxy.name.includes("澳门")) {
             newProxyGroup.proxies.push(proxy.name);
         }
     });
     obj[PROXY_GROUP_KEY].push(newProxyGroup);
 
-    obj[PROXY_RULE_KEY].unshift("DOMAIN-KEYWORD,bing.com,Bing");
+    obj[PROXY_RULE_KEY].unshift("DOMAIN-KEYWORD,bing,Bing");
     console.log("添加代理组:" + newProxyGroup.name)
 }
 
