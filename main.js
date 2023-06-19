@@ -130,7 +130,9 @@ function filterProxyGroups(console, obj, filterArray) {
         if (r != undefined) {
             console.log("删除代理组:" + group.name)
             deleteGroups.push(group)
-            replaceRule(console, obj, r.name, r.rule)
+            if(r.rule != "DELETE"){
+                replaceRule(console, obj, r.name, r.rule)
+            }
         }
     })
 

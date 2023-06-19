@@ -3,6 +3,10 @@ filter-proxy-group:
     rule: DIRECT
   - name: "Netflix"
     rule: 自动选择
+  - name: "Steam"
+    rule: DELETE  
+  - name: "ChatGPT"
+    rule: DELETE  
 
 mix-rule-providers:
   reject:
@@ -98,6 +102,17 @@ mix-rule-providers:
     interval: 86400     
 
 prepend-rules:
+  - DOMAIN-KEYWORD,steambroadcast.akamaized.net,DIRECT
+  - DOMAIN-KEYWORD,steamcdn-a.akamaihd.net,DIRECT
+  - DOMAIN-KEYWORD,steamcommunity-a.akamaihd.net',DIRECT
+  - DOMAIN-KEYWORD,steammobile.akamaized.net',DIRECT
+  - DOMAIN-KEYWORD,steampipe-kr.akamaized.net',DIRECT
+  - DOMAIN-KEYWORD,steampipe-partner.akamaized.net',DIRECT
+  - DOMAIN-KEYWORD,steampipe.akamaized.net',DIRECT
+  - DOMAIN-KEYWORD,steamstore-a.akamaihd.net',DIRECT
+  - DOMAIN-KEYWORD,steamusercontent-a.akamaihd.net',DIRECT
+  - DOMAIN-KEYWORD,steamuserimages-a.akamaihd.net',DIRECT
+  - DOMAIN-KEYWORD,steamvideo-a.akamaihd.net',DIRECT
   - DOMAIN,download-cdn.jetbrains.com,DIRECT
   - DOMAIN,download.jetbrains.com,DIRECT
   - RULE-SET,applications,DIRECT
