@@ -4,9 +4,9 @@ filter-proxy-group:
   - name: "Netflix"
     rule: 自动选择
   - name: "Steam"
-    rule: DELETE  
+    rule: DIRECT  
   - name: "ChatGPT"
-    rule: DELETE  
+    rule: ChatGpt  
 
 mix-rule-providers:
   reject:
