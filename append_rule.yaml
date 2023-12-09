@@ -3,10 +3,6 @@ filter-proxy-group:
     rule: DIRECT
   - name: "Netflix"
     rule: 自动选择
-  - name: "Steam"
-    rule: DIRECT  
-  - name: "ChatGPT"
-    rule: ChatGpt  
 
 mix-rule-providers:
   reject:

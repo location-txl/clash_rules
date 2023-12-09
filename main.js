@@ -50,7 +50,7 @@ async function parsePortYaml(axios, yaml, console, test, obj) {
         console.log("get config data error code:" + status)
     }
     addBingGroup(console, obj);
-    addChatgptGroup(console, obj);
+    // addChatgptGroup(console, obj);
     console.log("end process")
 }
 
