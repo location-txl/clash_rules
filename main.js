@@ -3,7 +3,6 @@ const PROXY_RULE_KEY = "rules"
 const PROXIES_KEY = "proxies"
 const PROXIES_RULE_PROVIDER_KEY = "rule-providers"
 const CONFIG_URL = "https://raw.githubusercontent.com/TLocation/clash_rules/master/append_rule.yaml"
-
 module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url, interval, selected }) => {
     const obj = yaml.parse(raw)
     await parsePortYaml(axios, yaml, console, false, obj)
