@@ -95,6 +95,7 @@ prepend-rules:
   - DOMAIN,api.gpt.ge,DIRECT
   - DOMAIN,download-cdn.jetbrains.com,DIRECT
   - DOMAIN,download.jetbrains.com,DIRECT
+  - RULE-SET,telegramcidr,Telegram
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
@@ -104,4 +105,3 @@ prepend-rules:
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
-  - RULE-SET,telegramcidr,自动选择
