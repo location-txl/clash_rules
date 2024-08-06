@@ -91,6 +91,7 @@ mix-rule-providers:
     interval: 86400     
 
 prepend-rules:
+  - DOMAIN,api.v3.cm,DIRECT
   - DOMAIN,api.v36.cm,DIRECT
   - DOMAIN,api.gpt.ge,DIRECT
   - DOMAIN,download-cdn.jetbrains.com,DIRECT
