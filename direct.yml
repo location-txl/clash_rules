@@ -1,0 +1,5 @@
+	payload:
+  - 'api.v3.cm'
+  - '*.vveai.com'
+  - 'api.gpt.ge'
+  - '+.jetbrains.com'
